@@ -11,7 +11,7 @@ class ImageTempFileTest < Test::Unit::TestCase
   end
 
   def test_temp_file_has_given_extension
-    assert_match /^[^.]+\.jpg$/, ImageTempFile.new('jpg').path
-    assert_match /^[^.]+\.png$/, ImageTempFile.new('png').path
+    assert_match /^.+\.jpg$/, ImageTempFile.new('jpg').path
+    assert_match /^.+\.png$/, ImageTempFile.new('png').path
   end
 end
